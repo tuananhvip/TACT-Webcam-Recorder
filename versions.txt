@@ -1,0 +1,42 @@
+version=1.0
+
+Hướng dẫn:
+Chương trình này có code về các loại hiển thỉ webcam (đơn, nhiều cùng lúc, video files, gộp 4 CAM làm 1 ảnh,...)
+
+Cách chạy:
+1 - Download về
+2 - Giải nén, chạy file Webcam.exe: nó sẽ tự sinh ra file Webcam_ID.txt, trong này có cấu hình để chạy 
+3 - Chỉnh sửa cấu hình:
+    0: CAM0 hoac Video files
+    1: 2 CAM thật
+    2: CAM0 *4
+    3: CAM0 * 4 => save to video file
+    4: Fasest CAM
+    5:  2 webcam Multi-thread
+    6: auto detect 4 camera, combine to display 1 window
+    7: can edit CAM by CAMID index
+    8: can edit CAM by CAMID index+ Keys control  **** quan trọng ****
+    9: get USB Product ID
+    10: Get Video ID and Name, save to txt file
+4 - Cấu hình chạy =8:
+  + Chủ yếu là dùng cái này, 4 CAM, nhưng nếu có ít hơn nó vẫn chạy, cái nào thiếu thì ảnh = nền đen
+  + Max 20K frame 1 lần chạy
+  + Control Key: 
+    * Space: Save/stop save Video
+    * '0': display saved video
+    * Esc: exit
+ + Có thể đổi vị trí của webcam  bằng cách thay đổi thứ tự trong file cấu hình, -1 hoặc > số webcam thật: bỏ không ghi vị trí đó
+ + Có thể thay đổi size của outout
+ + có thể ghi Video vào đường dẫn khác.
+ + Tham số SaveVideo chỉ dành cho các RunCase khác thôi, chứ trong trường hợp RunCase=8 thì không cần.
+5 - Tham số mặc định:
+  # Cam ID: -1=Not uses
+  Version=1.0
+  RunCase=8
+  SaveVideo=False
+  CAMID=[0,1,2,3,4,5]
+  Dim1Cam:w,h=[320,240]
+  SavePath=.
+ 
+ 
+  
